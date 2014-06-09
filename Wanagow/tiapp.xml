@@ -13,6 +13,7 @@
     <analytics>true</analytics>
     <guid>4a38afd7-d13a-40f3-853c-80d1699ccaff</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="ti.facebook.appid">1423658011243570</property >
     <ios>
         <plist>
             <dict>
@@ -47,7 +48,10 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules/>
+    <modules>
+        <module platform="android">facebook</module>
+        <module platform="iphone">facebook</module>
+    </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="blackberry">false</target>
