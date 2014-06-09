@@ -2164,38 +2164,3 @@ $.fgWin.open();
 
 
 
-function DialogoCompartirFacebook(butoon,link,tituloPrincipal,tituloSecundario,descripcion,imagen){
- /*Facebook CONFIG*/
-            
-      Titanium.Facebook.appid = "1423658011243570";
-      Titanium.Facebook.permissions = ['publish_stream', 'read_stream','user_birthday'];
-
-      butoon.addEventListener('click',function(e) {    
-          var data = {
-              link : link,//"http://www.appcelerator.com",
-              name : tituloPrincipal,//"Appcelerator Titanium Mobile",
-              message : "Checkout this cool open source project for creating mobile apps",
-              caption : tituloSecundario,//"Appcelerator Titanium Mobile",
-              picture : imagen,//"http://developer.appcelerator.com/assets/img/DEV_titmobile_image.png",
-              description :descripcion //"You've got the ideas, now you've got the power. Titanium translates " +
-                            //"your hard won web skills into native applications..."
-          };
-          alert(data);
-          
-          Titanium.Facebook.dialog("feed", data, function(e) {
-            if(e.success && e.result) {
-            	alert(e.source);
-                alert("Success! New Post ID: " + e.result);
-            } else {
-                if(e.error) {
-                    alert(e.error);
-                } else {
-                    alert("User canceled dialog.");
-                }
-            }
-        });
-      });
-              
-/*FIN FACEBOOK*/
-};
-alert(DialogoCompartirFacebook());
