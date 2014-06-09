@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>f3158557-a562-4e64-9711-4a7f9d2470e3</guid>
+    <guid>4a38afd7-d13a-40f3-853c-80d1699ccaff</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>
@@ -57,4 +57,7 @@
         <target device="tizen">false</target>
     </deployment-targets>
     <sdk-version>3.2.0.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
 </ti:app>
